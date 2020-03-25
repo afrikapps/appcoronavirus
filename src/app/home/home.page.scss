@@ -29,3 +29,42 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-card {
+  padding: 1em;
+}
+
+ion-icon {
+  font-size: 2em;
+}
+
+.content-1 {
+  height: 45%;
+  background-color: green;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 0%;
+}
+
+.titre {
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  font-family: fantasy;
+  font-size: xx-large;
+  color: white;
+
+}
+
+.content-2 {
+  height: 55%; 
+  /*background-color: #eee;*/
+  position: relative;
+}

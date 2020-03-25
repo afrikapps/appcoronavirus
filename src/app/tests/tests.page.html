@@ -1,0 +1,68 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>tests</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-content fullscreen scroll-y="false">
+
+  <ion-slides>
+    <ion-slide *ngFor="let item of questions; let i = index" >
+      <div class="content-1">
+        <p class="text-quiz">
+          {{questions[i].question}}
+        </p>
+      </div>
+    
+      <div class="content-2">
+        <div id="container" >
+          <ion-card>
+    
+            <ion-radio-group [(ngModel)]="reponse[i]">
+              <ion-item>
+                <ion-label>OUI</ion-label>
+                <ion-radio mode="ios" slot="start" value="oui" checked></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>NON</ion-label>
+                <ion-radio mode="ios" slot="start" value="non"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-card>
+          <ion-button [disabled]="questions.length === i+1 ? true: false" shape="round" fill="outline" (click)="suivant(questions[i].id, reponse[i])">Suivant</ion-button>
+          <ion-button *ngIf="questions.length === i+1" shape="round" (click)="valider(questions[i].id, reponse[i], reponses)">Valider</ion-button>
+    
+        </div>
+      </div>
+    </ion-slide>
+    
+  </ion-slides>
+
+
+  <!--<div class="content-1">
+    <p class="text-quiz">
+      {{questions[1].question}}
+    </p>
+  </div>
+
+  <div class="content-2">
+    <div id="container" >
+      <ion-card>
+
+        <ion-radio-group [(ngModel)]="reponse">
+          <ion-item>
+            <ion-label>OUI</ion-label>
+            <ion-radio mode="ios" slot="start" value="oui"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>NON</ion-label>
+            <ion-radio mode="ios"  slot="start" value="non"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card>
+      <ion-button shape="round" fill="outline" (click)="valider()">Suivant</ion-button>
+
+    </div>
+  </div>-->
+
+</ion-content>

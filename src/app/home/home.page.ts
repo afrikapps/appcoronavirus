@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { FormulaireComponent } from '../components/formulaire/formulaire.component';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private modalController: ModalController) {}
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: FormulaireComponent
+    });
+    return await modal.present();
+  }
 
 }

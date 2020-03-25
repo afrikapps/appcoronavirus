@@ -1,0 +1,43 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="content-1">
+      <div class="button-fermer" (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </div>
+
+    <h1 class="titre">COVID-19</h1>
+  </div>
+
+  <div class="content-form">
+    <form>
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Prénom</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Âge</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Contact</ion-label>
+        <ion-input type="tel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Profession</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" shape="round" (click)="openPageTest('')">S'inscrire</ion-button>
+      
+    </form>
+  </div>
+</ion-content>
