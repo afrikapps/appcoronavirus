@@ -8,36 +8,33 @@
 
     <h1 class="titre">COVID-19</h1>
   </div>
-
+<ion-card>
   <div class="content-form">
-    <form>
+    <form [formGroup]="formulaire" (ngSubmit)="openPageTest(formulaire.value)">
       <ion-item>
-        <ion-label>Nom</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label position="floating">Nom complet</ion-label>
+        <ion-input inputmode="text" required formControlName="nomcomplet"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Prénom</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Âge</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-label position="floating">Âge</ion-label>
+        <ion-input inputmode="numeric" required formControlName="age"></ion-input>
       </ion-item>
       
       <ion-item>
-        <ion-label>Contact</ion-label>
-        <ion-input type="tel"></ion-input>
+        <ion-label position="floating">Contact</ion-label>
+        <ion-input inputmode="tel" required formControlName="contact"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Profession</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label position="floating">Profession</ion-label>
+        <ion-input inputmode="text" required formControlName="profession"></ion-input>
       </ion-item>
 
-      <ion-button expand="full" shape="round" (click)="openPageTest('')">S'inscrire</ion-button>
+      <ion-button [disabled]="!formulaire.valid" expand="full" shape="round" type="submit">S'inscrire</ion-button>
       
     </form>
   </div>
+</ion-card>
+
 </ion-content>

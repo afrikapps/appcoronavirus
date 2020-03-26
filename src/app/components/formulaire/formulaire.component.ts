@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulaire',
@@ -9,7 +10,19 @@ import { Router } from '@angular/router';
 })
 export class FormulaireComponent implements OnInit {
 
-  constructor(private modalCtrl: ModalController, private router: Router) { }
+  inputId: any;
+
+  formulaire: FormGroup;
+
+  constructor(private modalCtrl: ModalController, private router: Router,
+              private formBuider: FormBuilder,) {
+    this.formulaire = this.formBuider.group({
+      nomcomplet : ['', [Validators.minLength(5), Validators.required]],
+      age : ['', [Validators.required]],
+      contact : ['', [Validators.minLength(8), Validators.required]],
+      profession : ['', [Validators.minLength(3), Validators.required]],
+    });
+  }
 
   ngOnInit() {}
 
@@ -20,6 +33,8 @@ export class FormulaireComponent implements OnInit {
   }
 
   openPageTest(data: any) {
+    console.log(data);
+    localStorage.setItem('formulaire', JSON.stringify(data));
     this.dismiss();
     this.router.navigateByUrl('/tests');
   }

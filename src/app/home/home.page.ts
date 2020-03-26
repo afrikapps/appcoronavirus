@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FormulaireComponent } from '../components/formulaire/formulaire.component';
+import { HistoriqueComponent } from '../components/historique/historique.component';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,16 @@ export class HomePage {
 
   constructor(private modalController: ModalController) {}
 
-  async presentModal() {
+  async formulaire() {
     const modal = await this.modalController.create({
       component: FormulaireComponent
+    });
+    return await modal.present();
+  }
+
+  async historique() {
+    const modal = await this.modalController.create({
+      component: HistoriqueComponent
     });
     return await modal.present();
   }

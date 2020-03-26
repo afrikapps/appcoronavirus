@@ -2,25 +2,29 @@ export const QUIZ = [
     {
         id: 1,
         // tslint:disable-next-line:max-line-length
-        question: 'Ipsum anim ex reprehenderit consectetur mollit eiusmod dolore.Tempor exercitation dolor cillum ea ex deserunt. Amet aute fugiat non ex fugiat qui qui ex voluptate mollit excepteur deserunt ullamco.',
-        reponse: false
+        question: 'Êtes-vous confronté à l\'un des problèmes suivants: difficulté à respirer sévère (par exemple, se débattre pour chaque respiration, parler en un seul mot) douleur thoracique sévère avoir du mal à se réveiller, se sentir confus, perte de conscience',
+        reponse: false,
+        niveauAlerte: '( Au cas où la personne répond oui, Veuillez appeler le (144 ou 143 ou 101)  ou vous rendre directement au service d\'urgence le plus proche.'
     },
     {
         id: 2,
         // tslint:disable-next-line:max-line-length
-        question: '2 Ipsum anim ex reprehenderit consectetur mollit eiusmod dolore.Tempor exercitation dolor cillum ea ex deserunt. Amet aute fugiat non ex fugiat qui qui ex voluptate mollit excepteur deserunt ullamco.',
-        reponse: false
+        question: 'Êtes-vous confronté à l\'un des problèmes suivants: essoufflement au repos, incapacité à se coucher en raison de difficultés respiratoires, problèmes de santé chroniques que vous avez de la difficulté à gérer en raison de votre maladie respiratoire actuelle',
+        reponse: false,
+        niveauAlerte: '( Au cas où la répond est oui, Veuillez appeler le (144 ou 143 ou 101)  ou vous rendre directement au service d\'urgence le plus proche.'
     },
     {
         id: 3,
         // tslint:disable-next-line:max-line-length
-        question: '3 Ipsum anim ex reprehenderit consectetur mollit eiusmod dolore.Tempor exercitation dolor cillum ea ex deserunt. Amet aute fugiat non ex fugiat qui qui ex voluptate mollit excepteur deserunt ullamco.',
-        reponse: false
+        question: 'Avez-vous l\'un des éléments suivants: fièvre, la toux, essoufflement, gorge irritée',
+        reponse: false,
+        niveauAlerte: ''
     },
     {
         id: 4,
         // tslint:disable-next-line:max-line-length
-        question: '4 Ipsum anim ex reprehenderit consectetur mollit eiusmod dolore.Tempor exercitation dolor cillum ea ex deserunt. Amet aute fugiat non ex fugiat qui qui ex voluptate mollit excepteur deserunt ullamco.',
-        reponse: false
+        question: 'Au cours des 14 derniers jours, avez-vous eu des contacts étroits avec une personne dont le COVID-19 a été confirmé ?',
+        reponse: false,
+        niveauAlerte: ''
     },
 ]

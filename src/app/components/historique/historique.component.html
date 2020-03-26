@@ -1,0 +1,23 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Historique des tests</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item *ngFor="let item of historique" >
+      <ion-label>
+        <h2>{{item.formulaire.nomcomplet}}</h2>
+        <p>{{item.appelUrgent?'Vous devez faire un test de Covid-19':'Vous n\'avez pas besoin de faire un test de Covid-19'}}</p>
+        <ion-button *ngIf="item.appelUrgent"  (click)="appel()" expand="block" fill="clear" shape="round">
+          Appelez le 144
+        </ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

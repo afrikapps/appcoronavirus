@@ -15,22 +15,25 @@
       </div>
     
       <div class="content-2">
-        <div id="container" >
+        <div *ngIf="item.niveauAlerte">
+          <p style="font-family: monospace;">{{item.niveauAlerte}}</p>
+        </div>
+        <div id="container">
           <ion-card>
     
             <ion-radio-group [(ngModel)]="reponse[i]">
               <ion-item>
                 <ion-label>OUI</ion-label>
-                <ion-radio mode="ios" slot="start" value="oui" checked></ion-radio>
+                <ion-radio mode="ios" slot="start" [value]="true" checked></ion-radio>
               </ion-item>
               <ion-item>
                 <ion-label>NON</ion-label>
-                <ion-radio mode="ios" slot="start" value="non"></ion-radio>
+                <ion-radio mode="ios" slot="start" [value]="false"></ion-radio>
               </ion-item>
             </ion-radio-group>
           </ion-card>
           <ion-button [disabled]="questions.length === i+1 ? true: false" shape="round" fill="outline" (click)="suivant(questions[i].id, reponse[i])">Suivant</ion-button>
-          <ion-button *ngIf="questions.length === i+1" shape="round" (click)="valider(questions[i].id, reponse[i], reponses)">Valider</ion-button>
+          <ion-button *ngIf="questions.length === reponse.length && questions.length === i+1" shape="round" (click)="valider(questions[i].id, reponse[i], reponses)">Valider</ion-button>
     
         </div>
       </div>
