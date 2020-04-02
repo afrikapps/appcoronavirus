@@ -4,6 +4,7 @@ export const QUIZ = [
         // tslint:disable-next-line:max-line-length
         question: 'Êtes-vous confronté à l\'un des problèmes suivants: difficulté à respirer sévère (par exemple, se débattre pour chaque respiration, parler en un seul mot) douleur thoracique sévère avoir du mal à se réveiller, se sentir confus, perte de conscience',
         reponse: false,
+        // tslint:disable-next-line:max-line-length
         niveauAlerte: '( Au cas où la personne répond oui, Veuillez appeler le (144 ou 143 ou 101)  ou vous rendre directement au service d\'urgence le plus proche.'
     },
     {
@@ -11,6 +12,7 @@ export const QUIZ = [
         // tslint:disable-next-line:max-line-length
         question: 'Êtes-vous confronté à l\'un des problèmes suivants: essoufflement au repos, incapacité à se coucher en raison de difficultés respiratoires, problèmes de santé chroniques que vous avez de la difficulté à gérer en raison de votre maladie respiratoire actuelle',
         reponse: false,
+        // tslint:disable-next-line:max-line-length
         niveauAlerte: '( Au cas où la répond est oui, Veuillez appeler le (144 ou 143 ou 101)  ou vous rendre directement au service d\'urgence le plus proche.'
     },
     {
@@ -27,4 +29,4 @@ export const QUIZ = [
         reponse: false,
         niveauAlerte: ''
     },
-]
+];
