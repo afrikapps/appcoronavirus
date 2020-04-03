@@ -31,6 +31,13 @@
         <ion-input inputmode="text" required formControlName="profession"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label>Commune</ion-label>
+        <ion-select required formControlName="commune" okText="Selectionner" cancelText="retour">
+          <ion-select-option *ngFor="let item of communes" [value]="item.ville">{{item.ville}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-button [disabled]="!formulaire.valid" expand="full" shape="round" type="submit">S'inscrire</ion-button>
       
     </form>

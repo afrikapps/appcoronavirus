@@ -12,10 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { HistoriqueComponent } from './components/historique/historique.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StatistiquesComponent } from './components/statistiques/statistiques.component';
 
 @NgModule({
-  declarations: [AppComponent, FormulaireComponent, HistoriqueComponent],
-  entryComponents: [FormulaireComponent, HistoriqueComponent],
+  declarations: [AppComponent, FormulaireComponent, HistoriqueComponent, StatistiquesComponent],
+  entryComponents: [FormulaireComponent, HistoriqueComponent, StatistiquesComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [
     StatusBar,

@@ -39,7 +39,7 @@ ion-icon {
 }
 
 .content-1 {
-  height: 45%;
+  height: 30%;
   background-color: green;
   position: relative;
   margin: auto;
@@ -64,7 +64,8 @@ ion-icon {
 }
 
 .content-2 {
-  height: 55%; 
+  height: 70%; 
   /*background-color: #eee;*/
   position: relative;
+  overflow: auto;
 }
